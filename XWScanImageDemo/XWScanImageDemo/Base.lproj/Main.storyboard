@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qinaideNizaina.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-2j-DsJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="AfV-hZ-1ur"/>
+                                    <constraint firstAttribute="width" constant="89" id="Zmm-un-qkM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AfV-hZ-1ur"/>
+                                        <exclude reference="Zmm-un-qkM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AfV-hZ-1ur"/>
+                                        <include reference="Zmm-un-qkM"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMM.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-CB-t16">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="JXS-FU-pD4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JXS-FU-pD4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JXS-FU-pD4"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchImage0.png" translatesAutoresizingMaskIntoConstraints="NO" id="46s-vm-vNA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="2Vg-mW-v8D"/>
+                                    <constraint firstAttribute="height" constant="139" id="UWX-rZ-LpR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Vg-mW-v8D"/>
+                                        <exclude reference="UWX-rZ-LpR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2Vg-mW-v8D"/>
+                                        <include reference="UWX-rZ-LpR"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KnZ-CB-t16" firstAttribute="leading" secondItem="46s-vm-vNA" secondAttribute="trailing" constant="21" id="DN5-1B-oXY"/>
+                            <constraint firstItem="ePs-2j-DsJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="bs8-wd-XTH"/>
+                            <constraint firstItem="ePs-2j-DsJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="btI-sA-PIa"/>
+                            <constraint firstItem="46s-vm-vNA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="230" id="duO-hd-HAL"/>
+                            <constraint firstItem="KnZ-CB-t16" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="f6g-8Z-Rsb"/>
+                            <constraint firstItem="KnZ-CB-t16" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gYP-i2-OPF"/>
+                            <constraint firstItem="46s-vm-vNA" firstAttribute="leading" secondItem="ePs-2j-DsJ" secondAttribute="trailing" constant="20" id="q5V-We-TQY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ePs-2j-DsJ"/>
+                                <exclude reference="KnZ-CB-t16"/>
+                                <exclude reference="46s-vm-vNA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="bs8-wd-XTH"/>
+                                <exclude reference="btI-sA-PIa"/>
+                                <exclude reference="duO-hd-HAL"/>
+                                <exclude reference="q5V-We-TQY"/>
+                                <exclude reference="DN5-1B-oXY"/>
+                                <exclude reference="f6g-8Z-Rsb"/>
+                                <exclude reference="gYP-i2-OPF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ePs-2j-DsJ"/>
+                                <include reference="KnZ-CB-t16"/>
+                                <include reference="46s-vm-vNA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="bs8-wd-XTH"/>
+                                <include reference="btI-sA-PIa"/>
+                                <include reference="duO-hd-HAL"/>
+                                <include reference="q5V-We-TQY"/>
+                                <include reference="DN5-1B-oXY"/>
+                                <include reference="f6g-8Z-Rsb"/>
+                                <include reference="gYP-i2-OPF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView1" destination="ePs-2j-DsJ" id="rEw-DT-jLQ"/>
+                        <outlet property="ImageView2" destination="46s-vm-vNA" id="0lS-H5-hOz"/>
+                        <outlet property="ImageView3" destination="KnZ-CB-t16" id="NA6-Oj-7rs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="304"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SearchImage0.png" width="640" height="960"/>
+        <image name="iconMM.jpg" width="1440" height="900"/>
+        <image name="qinaideNizaina.png" width="375" height="667"/>
+    </resources>
+</document>
