@@ -2,8 +2,9 @@
 点击图片查看大图，再次点击还原原始尺寸
 
 使用方法：
-1.导入XWScanImageClass
-2.为UIImageView增加点击事件，并且开始用户交互属性
+    1.导入XWScanImageClass
+    2.为UIImageView增加点击事件，并且开始用户交互属性
+#pragma mark - 浏览大图点击事件
     //为UIImageView1添加点击事件
     UITapGestureRecognizer *tapGestureRecognizer1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scanBigImageClick1:)];
     [_ImageView1 addGestureRecognizer:tapGestureRecognizer1];
