@@ -1,15 +1,15 @@
 # XWSacnBigImage
 点击图片查看大图，再次点击还原原始尺寸
 
-显示效果 ＜/br＞
+<br>显示效果 ＜/br＞
 
 ![](https://github.com/qxuewei/XWScanBigImage/raw/master/GIF/XWScanImageGif.gif)  
 
 ---
 使用方法：
 </code></pre>
-    1.导入XWScanImageClass ＜/br＞
-    2.为UIImageView增加点击事件，并且开始用户交互属性＜/br＞
+   <br> 1.导入XWScanImageClass ＜/br＞
+   <br> 2.为UIImageView增加点击事件，并且开始用户交互属性＜/br＞
 <code><pre>
 #pragma mark - 浏览大图点击事件
     //为UIImageView1添加点击事件
