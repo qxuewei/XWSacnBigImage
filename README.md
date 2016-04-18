@@ -3,7 +3,7 @@
 
 <br>显示效果 ＜/br＞
 
-![](https://github.com/qxuewei/XWScanBigImage/raw/master/GIF/XWScanImageGif.gif)  
+![](https://github.com/qxuewei/XWSacnBigImage/raw/master/GIF/XWScanImageGif.gif)  
 
 ---
 使用方法：
@@ -11,7 +11,7 @@
    <br> 1.导入XWScanImageClass ＜/br＞
    <br> 2.为UIImageView增加点击事件，并且开始用户交互属性＜/br＞
 <code><pre>
-#pragma mark - 浏览大图点击事件
+// - 浏览大图点击事件
     //为UIImageView1添加点击事件
     UITapGestureRecognizer *tapGestureRecognizer1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scanBigImageClick1:)];
     [_ImageView1 addGestureRecognizer:tapGestureRecognizer1];
@@ -20,7 +20,7 @@
 </code></pre>
     3.在监听事件方法中调用类方法 scanBigImageWithImageView
 <code><pre>
-#pragma mark - 浏览大图点击事件
+// - 浏览大图点击事件
     -(void)scanBigImageClick1:(UITapGestureRecognizer *)tap{
     NSLog(@"点击图片");
     UIImageView *clickedImageView = (UIImageView *)tap.view;
