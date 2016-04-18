@@ -1,5 +1,10 @@
 # XWSacnBigImage
 点击图片查看大图，再次点击还原原始尺寸
+
+显示效果 ＜/br＞
+
+![](https://github.com/qxuewei/XWScanBigImage/raw/master/GIF/XWScanImageGif.gif)  
+
 ---
 使用方法：
 </code></pre>
