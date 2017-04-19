@@ -33,7 +33,7 @@ static CGRect oldframe;
     //将所展示的imageView重新绘制在Window中
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:oldframe];
     [imageView setImage:image];
-    [imageView setTag:0];
+    [imageView setTag:1024];
     [backgroundView addSubview:imageView];
     //将原始视图添加到背景视图中
     [window addSubview:backgroundView];
@@ -69,7 +69,7 @@ static CGRect oldframe;
 +(void)hideImageView:(UITapGestureRecognizer *)tap{
     UIView *backgroundView = tap.view;
     //原始imageview
-    UIImageView *imageView = [tap.view viewWithTag:0];
+    UIImageView *imageView = [tap.view viewWithTag:1024];
     //恢复
     [UIView animateWithDuration:0.4 animations:^{
         [imageView setFrame:oldframe];
