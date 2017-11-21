@@ -62,7 +62,8 @@
     NSLog(@"点击图片");
     UIImageView *clickedImageView = (UIImageView *)tap.view;
     
-    [XWScanImage scanBigImageWithImageView:clickedImageView];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [XWScanImage scanBigImageWithImage:clickedImageView.image frame:[clickedImageView convertRect:clickedImageView.bounds toView:window]];
     
 }
 
