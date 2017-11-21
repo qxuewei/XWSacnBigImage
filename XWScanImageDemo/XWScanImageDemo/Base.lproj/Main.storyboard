@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qinaideNizaina.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-2j-DsJ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="16" y="275" width="89" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="AfV-hZ-1ur"/>
                                     <constraint firstAttribute="width" constant="89" id="Zmm-un-qkM"/>
@@ -38,7 +43,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMM.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KnZ-CB-t16">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="233" y="275" width="126" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="JXS-FU-pD4"/>
                                 </constraints>
@@ -54,7 +59,7 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchImage0.png" translatesAutoresizingMaskIntoConstraints="NO" id="46s-vm-vNA">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="125" y="250" width="87" height="139"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="87" id="2Vg-mW-v8D"/>
                                     <constraint firstAttribute="height" constant="139" id="UWX-rZ-LpR"/>
@@ -73,7 +78,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KnZ-CB-t16" firstAttribute="leading" secondItem="46s-vm-vNA" secondAttribute="trailing" constant="21" id="DN5-1B-oXY"/>
                             <constraint firstItem="ePs-2j-DsJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="bs8-wd-XTH"/>
@@ -90,13 +95,13 @@
                                 <exclude reference="46s-vm-vNA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bs8-wd-XTH"/>
-                                <exclude reference="btI-sA-PIa"/>
                                 <exclude reference="duO-hd-HAL"/>
                                 <exclude reference="q5V-We-TQY"/>
                                 <exclude reference="DN5-1B-oXY"/>
                                 <exclude reference="f6g-8Z-Rsb"/>
                                 <exclude reference="gYP-i2-OPF"/>
+                                <exclude reference="bs8-wd-XTH"/>
+                                <exclude reference="btI-sA-PIa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -106,13 +111,13 @@
                                 <include reference="46s-vm-vNA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bs8-wd-XTH"/>
-                                <include reference="btI-sA-PIa"/>
                                 <include reference="duO-hd-HAL"/>
                                 <include reference="q5V-We-TQY"/>
                                 <include reference="DN5-1B-oXY"/>
                                 <include reference="f6g-8Z-Rsb"/>
                                 <include reference="gYP-i2-OPF"/>
+                                <include reference="bs8-wd-XTH"/>
+                                <include reference="btI-sA-PIa"/>
                             </mask>
                         </variation>
                     </view>

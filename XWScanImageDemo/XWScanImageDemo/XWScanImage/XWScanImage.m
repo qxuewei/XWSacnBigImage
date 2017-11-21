@@ -14,19 +14,17 @@
 static CGRect oldframe;
 
 /**
- *  浏览大图
- *
- *  @param scanImageView 图片所在的imageView
+ 浏览大图 - 如果图片不是在imageView上可用此方法.
+ 
+ @param image 查看的图片对象
+ @param pOldframe 当前imageview的原始尺寸->将像素currentImageview.bounds由currentImageview.bounds所在视图转换到目标视图window中，返回在目标视图window中的像素值 [currentImageview convertRect:currentImageview.bounds toView:window];
  */
-+(void)scanBigImageWithImageView:(UIImageView *)currentImageview{
-    //当前imageview的图片
-    UIImage *image = currentImageview.image;
++(void)scanBigImageWithImage:(UIImage *)image frame:(CGRect)pOldframe {
+    oldframe = pOldframe;
     //当前视图
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     //背景
     UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    //当前imageview的原始尺寸->将像素currentImageview.bounds由currentImageview.bounds所在视图转换到目标视图window中，返回在目标视图window中的像素值
-    oldframe = [currentImageview convertRect:currentImageview.bounds toView:window];
     [backgroundView setBackgroundColor:[UIColor colorWithRed:107/255.0 green:107/255.0 blue:99/255.0 alpha:0.6]];
     //此时视图不会显示
     [backgroundView setAlpha:0];
@@ -38,13 +36,12 @@ static CGRect oldframe;
     //将原始视图添加到背景视图中
     [window addSubview:backgroundView];
     
-    
     //添加点击事件同样是类方法 -> 作用是再次点击回到初始大小
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideImageView:)];
     [backgroundView addGestureRecognizer:tapGestureRecognizer];
     
     //动画放大所展示的ImageView
-
+    
     [UIView animateWithDuration:0.4 animations:^{
         CGFloat y,width,height;
         y = ([UIScreen mainScreen].bounds.size.height - image.size.height * [UIScreen mainScreen].bounds.size.width / image.size.width) * 0.5;
@@ -62,6 +59,16 @@ static CGRect oldframe;
 }
 
 /**
+ *  浏览大图
+ *
+ *  @param currentImageview 图片所在的imageView
+ */
++(void)scanBigImageWithImageView:(UIImageView *)currentImageview{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [self scanBigImageWithImage:currentImageview.image frame:[currentImageview convertRect:currentImageview.bounds toView:window]];
+}
+
+/**
  *  恢复imageView原始尺寸
  *
  *  @param tap 点击事件
@@ -75,7 +82,7 @@ static CGRect oldframe;
         [imageView setFrame:oldframe];
         [backgroundView setAlpha:0];
     } completion:^(BOOL finished) {
-       //完成后操作->将背景视图删掉
+        //完成后操作->将背景视图删掉
         [backgroundView removeFromSuperview];
     }];
 }
